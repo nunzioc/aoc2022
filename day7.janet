@@ -14,8 +14,7 @@
     (string/has-prefix? "dir" line) (set (cwd name) @{".." cwd})
     (set (cwd name) (scan-number (first (string/split " " line))))))
 
-# get sizes
-(var sizes @[])
+(def sizes @[])
 (defn get-size [dir]
   (set (dir "..") nil)
   (def size
